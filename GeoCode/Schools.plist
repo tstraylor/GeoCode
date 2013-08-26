@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Schools</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Boulder High School</string>
+			<key>address</key>
+			<string>1604 Arapahoe Avenue</string>
+			<key>city</key>
+			<string>Boulder</string>
+			<key>state</key>
+			<string>CO</string>
+			<key>zip</key>
+			<string>80302</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>New Vista High School</string>
+			<key>address</key>
+			<string>700 20th Street</string>
+			<key>city</key>
+			<string>Boulder</string>
+			<key>state</key>
+			<string>CO</string>
+			<key>zip</key>
+			<string>80302</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Fairview High School</string>
+			<key>address</key>
+			<string>1515 Greenbriar Boulevard</string>
+			<key>city</key>
+			<string>Boulder</string>
+			<key>state</key>
+			<string>CO</string>
+			<key>zip</key>
+			<string>80305</string>
+		</dict>
+	</array>
+</dict>
+</plist>

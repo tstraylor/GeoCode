@@ -18,7 +18,21 @@
 		1D4DEA7E17CA781B0000E6B0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEA7D17CA781B0000E6B0 /* Default-568h@2x.png */; };
 		1D4DEA8117CA781B0000E6B0 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEA7F17CA781B0000E6B0 /* MainStoryboard_iPhone.storyboard */; };
 		1D4DEA8417CA781B0000E6B0 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEA8217CA781B0000E6B0 /* MainStoryboard_iPad.storyboard */; };
-		1D4DEA8717CA781B0000E6B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEA8617CA781B0000E6B0 /* ViewController.m */; };
+		1D4DEA8E17CA78A00000E6B0 /* Schools.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEA8D17CA78A00000E6B0 /* Schools.plist */; };
+		1D4DEA9117CA81040000E6B0 /* SchoolTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEA9017CA81040000E6B0 /* SchoolTableViewController.m */; };
+		1D4DEA9617CA86AA0000E6B0 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEA9317CA86AA0000E6B0 /* MapViewController.m */; };
+		1D4DEA9717CA86AA0000E6B0 /* NetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEA9517CA86AA0000E6B0 /* NetworkActivityIndicator.m */; };
+		1D4DEA9A17CA87250000E6B0 /* School.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEA9917CA87250000E6B0 /* School.m */; };
+		1D4DEA9D17CA92E40000E6B0 /* SchoolMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEA9C17CA92E40000E6B0 /* SchoolMapViewController.m */; };
+		1D4DEAA017CAABFE0000E6B0 /* School+MKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEA9F17CAABFE0000E6B0 /* School+MKAnnotation.m */; };
+		1D4DEAA517CAB6DC0000E6B0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4DEAA317CAB6BC0000E6B0 /* CoreLocation.framework */; };
+		1D4DEAA617CAB6DC0000E6B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4DEAA117CAB6B30000E6B0 /* MapKit.framework */; };
+		1D4DEAA917CAC3090000E6B0 /* SatelliteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEAA817CAC3090000E6B0 /* SatelliteViewController.m */; };
+		1D4DEAAB17CAE8AC0000E6B0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEAAA17CAE8AC0000E6B0 /* icon.png */; };
+		1D4DEAAD17CAE8BD0000E6B0 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEAAC17CAE8BD0000E6B0 /* icon@2x.png */; };
+		1D4DEAAF17CAE8E40000E6B0 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEAAE17CAE8E40000E6B0 /* icon-72.png */; };
+		1D4DEAB117CAE8F80000E6B0 /* icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEAB017CAE8F80000E6B0 /* icon-144.png */; };
+		1D4DEAB317CAEAAB0000E6B0 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEAB217CAEAAB0000E6B0 /* License.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +51,28 @@
 		1D4DEA7D17CA781B0000E6B0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1D4DEA8017CA781B0000E6B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		1D4DEA8317CA781B0000E6B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		1D4DEA8517CA781B0000E6B0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1D4DEA8617CA781B0000E6B0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1D4DEA8D17CA78A00000E6B0 /* Schools.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Schools.plist; sourceTree = "<group>"; };
+		1D4DEA8F17CA81040000E6B0 /* SchoolTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolTableViewController.h; sourceTree = "<group>"; };
+		1D4DEA9017CA81040000E6B0 /* SchoolTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolTableViewController.m; sourceTree = "<group>"; };
+		1D4DEA9217CA86AA0000E6B0 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		1D4DEA9317CA86AA0000E6B0 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		1D4DEA9417CA86AA0000E6B0 /* NetworkActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkActivityIndicator.h; sourceTree = "<group>"; };
+		1D4DEA9517CA86AA0000E6B0 /* NetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkActivityIndicator.m; sourceTree = "<group>"; };
+		1D4DEA9817CA87250000E6B0 /* School.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = School.h; sourceTree = "<group>"; };
+		1D4DEA9917CA87250000E6B0 /* School.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = School.m; sourceTree = "<group>"; };
+		1D4DEA9B17CA92E40000E6B0 /* SchoolMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolMapViewController.h; sourceTree = "<group>"; };
+		1D4DEA9C17CA92E40000E6B0 /* SchoolMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolMapViewController.m; sourceTree = "<group>"; };
+		1D4DEA9E17CAABFE0000E6B0 /* School+MKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "School+MKAnnotation.h"; sourceTree = "<group>"; };
+		1D4DEA9F17CAABFE0000E6B0 /* School+MKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "School+MKAnnotation.m"; sourceTree = "<group>"; };
+		1D4DEAA117CAB6B30000E6B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1D4DEAA317CAB6BC0000E6B0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1D4DEAA717CAC3090000E6B0 /* SatelliteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SatelliteViewController.h; sourceTree = "<group>"; };
+		1D4DEAA817CAC3090000E6B0 /* SatelliteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SatelliteViewController.m; sourceTree = "<group>"; };
+		1D4DEAAA17CAE8AC0000E6B0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		1D4DEAAC17CAE8BD0000E6B0 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		1D4DEAAE17CAE8E40000E6B0 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
+		1D4DEAB017CAE8F80000E6B0 /* icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-144.png"; sourceTree = "<group>"; };
+		1D4DEAB217CAEAAB0000E6B0 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +82,8 @@
 			files = (
 				1D4DEA6817CA781B0000E6B0 /* UIKit.framework in Frameworks */,
 				1D4DEA6A17CA781B0000E6B0 /* Foundation.framework in Frameworks */,
+				1D4DEAA517CAB6DC0000E6B0 /* CoreLocation.framework in Frameworks */,
+				1D4DEAA617CAB6DC0000E6B0 /* MapKit.framework in Frameworks */,
 				1D4DEA6C17CA781B0000E6B0 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +111,8 @@
 		1D4DEA6617CA781B0000E6B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D4DEAA317CAB6BC0000E6B0 /* CoreLocation.framework */,
+				1D4DEAA117CAB6B30000E6B0 /* MapKit.framework */,
 				1D4DEA6717CA781B0000E6B0 /* UIKit.framework */,
 				1D4DEA6917CA781B0000E6B0 /* Foundation.framework */,
 				1D4DEA6B17CA781B0000E6B0 /* CoreGraphics.framework */,
@@ -85,13 +123,26 @@
 		1D4DEA6D17CA781B0000E6B0 /* GeoCode */ = {
 			isa = PBXGroup;
 			children = (
+				1D4DEA9217CA86AA0000E6B0 /* MapViewController.h */,
+				1D4DEA9317CA86AA0000E6B0 /* MapViewController.m */,
+				1D4DEA9417CA86AA0000E6B0 /* NetworkActivityIndicator.h */,
+				1D4DEA9517CA86AA0000E6B0 /* NetworkActivityIndicator.m */,
 				1D4DEA7617CA781B0000E6B0 /* AppDelegate.h */,
 				1D4DEA7717CA781B0000E6B0 /* AppDelegate.m */,
 				1D4DEA7F17CA781B0000E6B0 /* MainStoryboard_iPhone.storyboard */,
 				1D4DEA8217CA781B0000E6B0 /* MainStoryboard_iPad.storyboard */,
-				1D4DEA8517CA781B0000E6B0 /* ViewController.h */,
-				1D4DEA8617CA781B0000E6B0 /* ViewController.m */,
 				1D4DEA6E17CA781B0000E6B0 /* Supporting Files */,
+				1D4DEA8D17CA78A00000E6B0 /* Schools.plist */,
+				1D4DEA8F17CA81040000E6B0 /* SchoolTableViewController.h */,
+				1D4DEA9017CA81040000E6B0 /* SchoolTableViewController.m */,
+				1D4DEA9817CA87250000E6B0 /* School.h */,
+				1D4DEA9917CA87250000E6B0 /* School.m */,
+				1D4DEA9E17CAABFE0000E6B0 /* School+MKAnnotation.h */,
+				1D4DEA9F17CAABFE0000E6B0 /* School+MKAnnotation.m */,
+				1D4DEA9B17CA92E40000E6B0 /* SchoolMapViewController.h */,
+				1D4DEA9C17CA92E40000E6B0 /* SchoolMapViewController.m */,
+				1D4DEAA717CAC3090000E6B0 /* SatelliteViewController.h */,
+				1D4DEAA817CAC3090000E6B0 /* SatelliteViewController.m */,
 			);
 			path = GeoCode;
 			sourceTree = "<group>";
@@ -99,6 +150,10 @@
 		1D4DEA6E17CA781B0000E6B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1D4DEAB017CAE8F80000E6B0 /* icon-144.png */,
+				1D4DEAAE17CAE8E40000E6B0 /* icon-72.png */,
+				1D4DEAAC17CAE8BD0000E6B0 /* icon@2x.png */,
+				1D4DEAAA17CAE8AC0000E6B0 /* icon.png */,
 				1D4DEA6F17CA781B0000E6B0 /* GeoCode-Info.plist */,
 				1D4DEA7017CA781B0000E6B0 /* InfoPlist.strings */,
 				1D4DEA7317CA781B0000E6B0 /* main.m */,
@@ -106,6 +161,7 @@
 				1D4DEA7917CA781B0000E6B0 /* Default.png */,
 				1D4DEA7B17CA781B0000E6B0 /* Default@2x.png */,
 				1D4DEA7D17CA781B0000E6B0 /* Default-568h@2x.png */,
+				1D4DEAB217CAEAAB0000E6B0 /* License.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -167,6 +223,12 @@
 				1D4DEA7E17CA781B0000E6B0 /* Default-568h@2x.png in Resources */,
 				1D4DEA8117CA781B0000E6B0 /* MainStoryboard_iPhone.storyboard in Resources */,
 				1D4DEA8417CA781B0000E6B0 /* MainStoryboard_iPad.storyboard in Resources */,
+				1D4DEA8E17CA78A00000E6B0 /* Schools.plist in Resources */,
+				1D4DEAAB17CAE8AC0000E6B0 /* icon.png in Resources */,
+				1D4DEAAD17CAE8BD0000E6B0 /* icon@2x.png in Resources */,
+				1D4DEAAF17CAE8E40000E6B0 /* icon-72.png in Resources */,
+				1D4DEAB117CAE8F80000E6B0 /* icon-144.png in Resources */,
+				1D4DEAB317CAEAAB0000E6B0 /* License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +241,13 @@
 			files = (
 				1D4DEA7417CA781B0000E6B0 /* main.m in Sources */,
 				1D4DEA7817CA781B0000E6B0 /* AppDelegate.m in Sources */,
-				1D4DEA8717CA781B0000E6B0 /* ViewController.m in Sources */,
+				1D4DEA9117CA81040000E6B0 /* SchoolTableViewController.m in Sources */,
+				1D4DEA9617CA86AA0000E6B0 /* MapViewController.m in Sources */,
+				1D4DEA9717CA86AA0000E6B0 /* NetworkActivityIndicator.m in Sources */,
+				1D4DEA9A17CA87250000E6B0 /* School.m in Sources */,
+				1D4DEA9D17CA92E40000E6B0 /* SchoolMapViewController.m in Sources */,
+				1D4DEAA017CAABFE0000E6B0 /* School+MKAnnotation.m in Sources */,
+				1D4DEAA917CAC3090000E6B0 /* SatelliteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,10 +25,12 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "SatelliteViewController.h"
+#import "NetworkActivityIndicator.h"
 
 @interface SatelliteViewController ()
 
-@property (nonatomic, strong) School *school;
+@property (strong, nonatomic) School *school;
+@property (strong, nonatomic) NetworkActivityIndicator *networkActivityIndicator;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *schoolLabel;
 @property (weak, nonatomic) IBOutlet UIButton *mapItButton;
@@ -38,8 +40,10 @@
 @implementation SatelliteViewController
 
 @synthesize school = _school;
+@synthesize networkActivityIndicator = _networkActivityIndicator;
 @synthesize mapView = _mapView;
 @synthesize schoolLabel = _schoolLabel;
+@synthesize mapItButton = _mapItButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -66,6 +70,11 @@
     self.mapItButton.titleLabel.textColor = [UIColor yellowColor];
     self.mapItButton.backgroundColor = [UIColor clearColor];
 
+    // get the network indicator setup and running.
+    self.networkActivityIndicator = [NetworkActivityIndicator getInstance];
+    [self.networkActivityIndicator start];
+
+    // setup the map
     self.mapView.delegate = self;
     self.mapView.centerCoordinate = self.school.location;
     NSLog(@"[%@ %@] %f %f", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.school.location.latitude, self.school.location.longitude);
@@ -76,6 +85,8 @@
     region.span.latitudeDelta = 0.005;
     region.span.longitudeDelta = 0.005;
     [self.mapView setRegion:region animated:YES];
+    
+    [self.networkActivityIndicator stop];
 }
 
 - (void)didReceiveMemoryWarning

@@ -13,9 +13,6 @@
 		1D4DEA7217CA781B0000E6B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEA7017CA781B0000E6B0 /* InfoPlist.strings */; };
 		1D4DEA7417CA781B0000E6B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEA7317CA781B0000E6B0 /* main.m */; };
 		1D4DEA7817CA781B0000E6B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEA7717CA781B0000E6B0 /* AppDelegate.m */; };
-		1D4DEA7A17CA781B0000E6B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEA7917CA781B0000E6B0 /* Default.png */; };
-		1D4DEA7C17CA781B0000E6B0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEA7B17CA781B0000E6B0 /* Default@2x.png */; };
-		1D4DEA7E17CA781B0000E6B0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEA7D17CA781B0000E6B0 /* Default-568h@2x.png */; };
 		1D4DEA8117CA781B0000E6B0 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEA7F17CA781B0000E6B0 /* MainStoryboard_iPhone.storyboard */; };
 		1D4DEA8417CA781B0000E6B0 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEA8217CA781B0000E6B0 /* MainStoryboard_iPad.storyboard */; };
 		1D4DEA8E17CA78A00000E6B0 /* Schools.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEA8D17CA78A00000E6B0 /* Schools.plist */; };
@@ -28,11 +25,8 @@
 		1D4DEAA517CAB6DC0000E6B0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4DEAA317CAB6BC0000E6B0 /* CoreLocation.framework */; };
 		1D4DEAA617CAB6DC0000E6B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4DEAA117CAB6B30000E6B0 /* MapKit.framework */; };
 		1D4DEAA917CAC3090000E6B0 /* SatelliteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DEAA817CAC3090000E6B0 /* SatelliteViewController.m */; };
-		1D4DEAAB17CAE8AC0000E6B0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEAAA17CAE8AC0000E6B0 /* icon.png */; };
-		1D4DEAAD17CAE8BD0000E6B0 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEAAC17CAE8BD0000E6B0 /* icon@2x.png */; };
-		1D4DEAAF17CAE8E40000E6B0 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEAAE17CAE8E40000E6B0 /* icon-72.png */; };
-		1D4DEAB117CAE8F80000E6B0 /* icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEAB017CAE8F80000E6B0 /* icon-144.png */; };
 		1D4DEAB317CAEAAB0000E6B0 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1D4DEAB217CAEAAB0000E6B0 /* License.txt */; };
+		1DB7F3BC184C093E0054A931 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DB7F3BB184C093E0054A931 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,9 +40,6 @@
 		1D4DEA7517CA781B0000E6B0 /* GeoCode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoCode-Prefix.pch"; sourceTree = "<group>"; };
 		1D4DEA7617CA781B0000E6B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D4DEA7717CA781B0000E6B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1D4DEA7917CA781B0000E6B0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		1D4DEA7B17CA781B0000E6B0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		1D4DEA7D17CA781B0000E6B0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1D4DEA8017CA781B0000E6B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		1D4DEA8317CA781B0000E6B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		1D4DEA8D17CA78A00000E6B0 /* Schools.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Schools.plist; sourceTree = "<group>"; };
@@ -68,11 +59,8 @@
 		1D4DEAA317CAB6BC0000E6B0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1D4DEAA717CAC3090000E6B0 /* SatelliteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SatelliteViewController.h; sourceTree = "<group>"; };
 		1D4DEAA817CAC3090000E6B0 /* SatelliteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SatelliteViewController.m; sourceTree = "<group>"; };
-		1D4DEAAA17CAE8AC0000E6B0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		1D4DEAAC17CAE8BD0000E6B0 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		1D4DEAAE17CAE8E40000E6B0 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
-		1D4DEAB017CAE8F80000E6B0 /* icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-144.png"; sourceTree = "<group>"; };
 		1D4DEAB217CAEAAB0000E6B0 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		1DB7F3BB184C093E0054A931 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +131,7 @@
 				1D4DEA9C17CA92E40000E6B0 /* SchoolMapViewController.m */,
 				1D4DEAA717CAC3090000E6B0 /* SatelliteViewController.h */,
 				1D4DEAA817CAC3090000E6B0 /* SatelliteViewController.m */,
+				1DB7F3BB184C093E0054A931 /* Images.xcassets */,
 			);
 			path = GeoCode;
 			sourceTree = "<group>";
@@ -150,17 +139,10 @@
 		1D4DEA6E17CA781B0000E6B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1D4DEAB017CAE8F80000E6B0 /* icon-144.png */,
-				1D4DEAAE17CAE8E40000E6B0 /* icon-72.png */,
-				1D4DEAAC17CAE8BD0000E6B0 /* icon@2x.png */,
-				1D4DEAAA17CAE8AC0000E6B0 /* icon.png */,
 				1D4DEA6F17CA781B0000E6B0 /* GeoCode-Info.plist */,
 				1D4DEA7017CA781B0000E6B0 /* InfoPlist.strings */,
 				1D4DEA7317CA781B0000E6B0 /* main.m */,
 				1D4DEA7517CA781B0000E6B0 /* GeoCode-Prefix.pch */,
-				1D4DEA7917CA781B0000E6B0 /* Default.png */,
-				1D4DEA7B17CA781B0000E6B0 /* Default@2x.png */,
-				1D4DEA7D17CA781B0000E6B0 /* Default-568h@2x.png */,
 				1D4DEAB217CAEAAB0000E6B0 /* License.txt */,
 			);
 			name = "Supporting Files";
@@ -218,16 +200,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D4DEA7217CA781B0000E6B0 /* InfoPlist.strings in Resources */,
-				1D4DEA7A17CA781B0000E6B0 /* Default.png in Resources */,
-				1D4DEA7C17CA781B0000E6B0 /* Default@2x.png in Resources */,
-				1D4DEA7E17CA781B0000E6B0 /* Default-568h@2x.png in Resources */,
 				1D4DEA8117CA781B0000E6B0 /* MainStoryboard_iPhone.storyboard in Resources */,
 				1D4DEA8417CA781B0000E6B0 /* MainStoryboard_iPad.storyboard in Resources */,
+				1DB7F3BC184C093E0054A931 /* Images.xcassets in Resources */,
 				1D4DEA8E17CA78A00000E6B0 /* Schools.plist in Resources */,
-				1D4DEAAB17CAE8AC0000E6B0 /* icon.png in Resources */,
-				1D4DEAAD17CAE8BD0000E6B0 /* icon@2x.png in Resources */,
-				1D4DEAAF17CAE8E40000E6B0 /* icon-72.png in Resources */,
-				1D4DEAB117CAE8F80000E6B0 /* icon-144.png in Resources */,
 				1D4DEAB317CAEAAB0000E6B0 /* License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,9 +318,13 @@
 		1D4DEA8B17CA781B0000E6B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GeoCode/GeoCode-Prefix.pch";
 				INFOPLIST_FILE = "GeoCode/GeoCode-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -353,9 +333,13 @@
 		1D4DEA8C17CA781B0000E6B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GeoCode/GeoCode-Prefix.pch";
 				INFOPLIST_FILE = "GeoCode/GeoCode-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -380,6 +364,7 @@
 				1D4DEA8C17CA781B0000E6B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -27,8 +27,14 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
+#if !defined(METERS_PER_MILE)
+#define METERS_PER_MILE 1609.344
+#endif
+
 @interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+- (void)updateRegion;
 
 @end

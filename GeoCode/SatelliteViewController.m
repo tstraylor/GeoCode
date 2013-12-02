@@ -27,13 +27,19 @@
 #import "SatelliteViewController.h"
 #import "NetworkActivityIndicator.h"
 
+#if !defined(METERS_PER_MILE)
+#define METERS_PER_MILE 1609.344
+#endif
+
 @interface SatelliteViewController ()
 
 @property (strong, nonatomic) School *school;
 @property (strong, nonatomic) NetworkActivityIndicator *networkActivityIndicator;
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UIImageView *satelliteView;
+@property (weak, nonatomic) IBOutlet UILabel *imageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *schoolLabel;
-@property (weak, nonatomic) IBOutlet UIButton *mapItButton;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+
 
 @end
 
@@ -41,9 +47,9 @@
 
 @synthesize school = _school;
 @synthesize networkActivityIndicator = _networkActivityIndicator;
-@synthesize mapView = _mapView;
-@synthesize schoolLabel = _schoolLabel;
-@synthesize mapItButton = _mapItButton;
+
+
+#pragma mark - ViewController Lifecycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -57,36 +63,78 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view.
     
     // setup the school uilabel
-    self.schoolLabel.text = self.school.name;
-    self.schoolLabel.textColor = [UIColor whiteColor];
-    self.schoolLabel.font = [UIFont fontWithName:@"MarkerFelt-Wide" size:20.0f];
     
-    // setup the map it uibutton
-    self.mapItButton.titleLabel.text = @"Map It";
-    self.mapItButton.titleLabel.font = [UIFont fontWithName:@"MarkerFelt-Wide" size:20.0f];
-    self.mapItButton.titleLabel.textColor = [UIColor yellowColor];
-    self.mapItButton.backgroundColor = [UIColor clearColor];
-
+    NSDictionary *schoolAttr = @{NSFontAttributeName :[UIFont systemFontOfSize:17.0],
+                                 NSForegroundColorAttributeName: [UIColor blackColor]};
+    NSAttributedString *a1 = [[NSAttributedString alloc] initWithString:[self.school name] attributes:schoolAttr];
+    self.schoolLabel.attributedText = a1;
+    self.schoolLabel.adjustsFontSizeToFitWidth = YES;
+    
+    // setup the address uilabel
+    
+    NSDictionary *addressAttr = @{NSFontAttributeName :[UIFont systemFontOfSize:15.0],
+                                 NSForegroundColorAttributeName: [UIColor blackColor]};
+    
+    NSAttributedString *a2 = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\n%@, %@ %@",
+                                                                         [self.school address],
+                                                                         [self.school city],
+                                                                         [self.school state],
+                                                                         [self.school zip]]
+                                                             attributes:addressAttr];
+    
+    self.addressLabel.attributedText = a2;
+    self.addressLabel.adjustsFontSizeToFitWidth = YES;
+    
     // get the network indicator setup and running.
     self.networkActivityIndicator = [NetworkActivityIndicator getInstance];
     [self.networkActivityIndicator start];
 
-    // setup the map
-    self.mapView.delegate = self;
-    self.mapView.centerCoordinate = self.school.location;
-    NSLog(@"[%@ %@] %f %f", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.school.location.latitude, self.school.location.longitude);
-    self.mapView.mapType = MKMapTypeSatellite;
-    MKCoordinateRegion region;
-    region.center.latitude = self.school.location.latitude;
-    region.center.longitude = self.school.location.longitude;
-    region.span.latitudeDelta = 0.005;
-    region.span.longitudeDelta = 0.005;
-    [self.mapView setRegion:region animated:YES];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([self.school location],
+                                                               0.25*METERS_PER_MILE, 0.25*METERS_PER_MILE);
     
-    [self.networkActivityIndicator stop];
+    MKMapSnapshotOptions *options = [[MKMapSnapshotOptions alloc] init];
+    options.region  = region;
+    options.mapType = MKMapTypeSatellite;
+    //options.mapType = MKMapTypeHybrid;
+    options.scale = 1.0;
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+        options.size = CGSizeMake(728.0, 436.0);
+    else
+        options.size = CGSizeMake(320.0, 240.0);
+    
+    options.showsPointsOfInterest = NO;
+    
+    MKMapSnapshotter *snapShotter = [[MKMapSnapshotter alloc] initWithOptions:options];
+    [snapShotter startWithCompletionHandler:^(MKMapSnapshot *snapshot, NSError *error) {
+        
+        NSLog(@"[%@ %@] snap shotter", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+        if(error)
+            NSLog(@"[%@ %@] %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), error.localizedDescription);
+        
+        self.satelliteView.image = snapshot.image;
+
+        NSShadow *bg = [[NSShadow alloc] init];
+        bg.shadowColor = [UIColor blackColor];
+        bg.shadowOffset = CGSizeMake(1.5, 1.5);
+        
+        NSDictionary *locattr = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:15.0],
+                                  NSForegroundColorAttributeName: [UIColor whiteColor],
+                                  NSShadowAttributeName: bg};
+        
+        NSAttributedString *loctext = [[NSAttributedString alloc] initWithString:[self.school name]
+                                                                      attributes:locattr];
+        
+        self.imageLabel.attributedText = loctext;
+        self.imageLabel.adjustsFontSizeToFitWidth = YES;
+        
+        [self.networkActivityIndicator stop];
+        
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning

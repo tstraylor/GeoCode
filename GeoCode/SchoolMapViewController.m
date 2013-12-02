@@ -26,6 +26,7 @@
 #import "SchoolMapViewController.h"
 #import "NetworkActivityIndicator.h"
 
+
 @interface SchoolMapViewController ()
 
 @property (nonatomic, strong) School *school;
@@ -38,10 +39,14 @@
 @synthesize school = _school;
 @synthesize networkActivityIndicator = _networkActivityIndicator;
 
+#pragma mark - Setters
+
 -(void)setSchool:(School *)school
 {
     _school = school;
 }
+
+#pragma mark - ViewController Lifecycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -58,11 +63,11 @@
 	// Do any additional setup after loading the view.
     
     // set the title to the name of the school
-    self.title = self.school.name;
+    //self.title = self.school.name;
     
     // get the network indicator setup and running.
     self.networkActivityIndicator = [NetworkActivityIndicator getInstance];
-    [self.networkActivityIndicator start];
+
     [self schoolAnnotations];
 }
 
@@ -82,20 +87,31 @@
  
     NSString *fullAddress = [self.school fullAddress];
     NSLog(@"[%@ %@] fullAddress: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), fullAddress);
+    
+    // start the network indicator
+    [self.networkActivityIndicator start];
     CLGeocoder *geocoder = [[CLGeocoder alloc]init];
-    [geocoder geocodeAddressString:fullAddress completionHandler:^(NSArray *placemarks, NSError *error){
+    [geocoder geocodeAddressString:fullAddress completionHandler:^(NSArray *placemarks, NSError *error) {
         
         NSLog(@"[%@ %@] placemarks count: %d", NSStringFromClass([self class]), NSStringFromSelector(_cmd), [placemarks count]);
         
         for (CLPlacemark* clPlacemark in placemarks)
         {
             NSLog(@"[%@ %@] Postal Code: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), [clPlacemark postalCode]);
-            self.school.location = [clPlacemark.location coordinate];
-            
-            NSArray *schoolLocation = [[NSArray alloc] initWithObjects:self.school, nil];
-            [self.mapView addAnnotations:schoolLocation];
-            [self.networkActivityIndicator stop];
+            [self.school setLocation:[clPlacemark.location coordinate]];
         }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            self.mapView.centerCoordinate = self.school.location;
+            self.mapView.zoomEnabled = YES;
+            [self.mapView addAnnotation:(id<MKAnnotation>)self.school];
+            [self updateRegion];
+            // stop the network indicator
+            [self.networkActivityIndicator stop];
+            
+        });
+
     }];
 
 }

@@ -51,8 +51,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
     self.mapView.delegate = self;
-    self.mapView.showsUserLocation = YES;
+    self.mapView.showsUserLocation = NO;
     self.needUpdateRegion = YES;
 }
 
@@ -157,11 +158,9 @@
     {
         // there were no annotations found so we'll zoom into the location of
         // our current location.
-        MKCoordinateRegion region;
-        region.center.latitude = self.mapView.userLocation.location.coordinate.latitude;
-        region.center.longitude = self.mapView.userLocation.location.coordinate.longitude;
-        region.span.latitudeDelta = 1.0;
-        region.span.longitudeDelta = 1.0;
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.mapView.userLocation.location.coordinate,
+                                                                       1.0*METERS_PER_MILE, 1.0*METERS_PER_MILE);
+
         [self.mapView setRegion:region animated:YES];
     }
 
